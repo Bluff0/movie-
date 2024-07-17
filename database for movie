@@ -1,0 +1,2 @@
+create table movie(m_id int NOT NULL,m_name varchar(70),timing varchar(20),t_rate int, PRIMARY KEY (m_id));
+create table ticket (bookingno int NOT NULL,name varchar(70),timing varchar(20),no_ticket int,total int,email varchar(50), PRIMARY KEY (bookingno));
