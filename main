@@ -1,0 +1,29 @@
+import random 
+import pandas as pd 
+import mysql.connector
+import matplotlib.pyplot as plt
+rush=mysql.connector.connect(host="localhost",user='root',password='hsaed',database='movie')
+while(true):
+  print('**************************************************************************************')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                  LEO CINEMAS                                       *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('*                                                                                    *')
+  print('**************************************************************************************')
+  print('1.add movie')
+  print('2.change show timings')
+  print('3.remove movie')
+  print('4.book tickets')
+  print('5.cancel tickets')
+  print('6.movie rating by collection')
+  print('7.movie rating visualization')
+  print('8.exit') 
+  ch=int(input('enter ur choice'))
