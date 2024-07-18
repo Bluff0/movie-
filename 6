@@ -1,0 +1,10 @@
+#movie rating by collection
+  elif(chr1==6):
+    df=pd.read_sql_query('select name,sum(total) from ticket group by name', con=engine)
+    print()
+    print('*********************************************************************************')
+    for(i,j)in df.iterrows():
+      print(j['name'],"\t",j['sum(total)'])
+      print('******************************************************************************')
+      print()
+      p=input("to go back to main menu press any key")
