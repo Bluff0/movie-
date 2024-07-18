@@ -1,0 +1,14 @@
+ if(chr1==1):
+    print('')
+    print('add movie details')
+    m_id=input('Enter movie id:')
+    m_name=input('movie name')
+    timing=input('movie timing:')
+    t_rate=input('ticket rate')
+    add_detail = "INSERT INTO movie VALUES (%s, %s, %s, %s);"
+    c1=rush.cursor()
+    c1.execute(add_detail, (m_id, m_name, timing, t_rate))
+    rush.commit()
+    c1.close()
+    print ('movie added successfully')
+    p=input('to go back to main menu press any key')
