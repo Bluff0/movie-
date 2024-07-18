@@ -1,0 +1,12 @@
+elif(chr1==2):
+    print('')
+    print('change movie show timing')
+    movie_id=input('change movie timing, enter movie id:')
+    new_timings=input('enter new timing:')
+    cursor= rush.cursor()
+    updatequery= "UPDATE movie SET timing = %s WHERE m_id = %s;"
+    cursor.execute(updatequery, (new_timings, movie_id))
+    rush.commit()
+    cursor.close()
+    print('movie timings updated successfully')
+    p=input('to go back press any key')
