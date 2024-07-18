@@ -1,0 +1,9 @@
+ elif(chr1==3):
+    print('remove a movie')
+    movie_id=input('to remove , enter movie id: ')
+    cursor=rush.cursor()
+    sqlquery="delete from movie where m_id= "+movie_id+";"
+    cursor.execute(sqlquery)
+    rush.commit()
+    print('movie deleted successfully')
+    p=input('to go back press any key')
