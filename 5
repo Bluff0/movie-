@@ -1,0 +1,10 @@
+  elif(chr1==5):
+    print('cancel ticket')
+    booking_id=input('to cancel ticket enter booking id')
+    cursor=rush.cursor()
+    sqlquery="delete from ticket where bookingno="+booking_id+";"
+    cursor.execute(sqlquery)
+    rush.commit()
+    print('ticket cancelled successfully')
+    p=input('to go back to main menu press any key')
+    
