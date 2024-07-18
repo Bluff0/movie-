@@ -1,0 +1,11 @@
+elif(chr1==7):
+    df=pd.read_sql_query('select name,sum(total)from ticket group by name',con=engine)
+    df.plot(kind='bar',x='name',y='sum(total)',title='movie rating',color=['orange','r','b','c','g','y'])
+    plt.xticks(rotation=0)
+    plt.show()
+  elif(chr1==8):
+    break
+  else:
+    print('Invalid choice. Please enter a valid option.')
+
+rush.close()
