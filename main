@@ -1,10 +1,14 @@
 import random 
-import pandas as pd 
+import pandas as pd
+from sqlalchemy import create_engine
+
+db_url = 'mysql+mysqlconnector://root:GREATsaeed123@localhost/movie'
+engine = create_engine(db_url)
 import mysql.connector
 import matplotlib.pyplot as plt
-rush=mysql.connector.connect(host="localhost",user='root',password='hsaed',database='movie')
-while(true):
-     print('''**************************************************************************************
+rush=mysql.connector.connect(host="localhost",user='root',password='GREATsaeed123',database='movie')
+while(True):
+  print('''**************************************************************************************
 *                                                                                    *
 *                                                                                    *
 *                                                                                    *
@@ -25,4 +29,4 @@ while(true):
    6.movie rating by collection
    7.movie rating visualization
    8.exit''')
-  ch=int(input('enter ur choice'))
+  chr1=int(input('enter ur choice'))
