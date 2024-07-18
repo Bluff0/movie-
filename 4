@@ -1,0 +1,27 @@
+#book tickets
+  elif(chr1==4):
+    df = pd.read_sql_query('SELECT * FROM movie', rush)
+    print(df)
+    for index, row in df.iterrows():
+      print()
+      print('*************************************************************************')
+      print(row['m_name'], '\t', row['timing'], '\t', row['t_rate'])
+      print('*************************************************************************')
+      print()
+      sl_e=(input('do you want to choose a movie? (y/n)')).lower()
+      bookingno=random.randint(1100, 9999)
+      name = input('Enter your name: ')
+      timings = row['timing']
+      no_ticket = int(input('Enter number of tickets: '))
+      total = row['t_rate'] * no_ticket
+      email = input('Enter your email: ')
+      
+      c1=rush.cursor()
+      ticket_details = "INSERT INTO ticket VALUES (%s, %s, %s, %s, %s, %s)"
+      c1.execute(ticket_details, (bookingno, name, timings, no_ticket, total, email))
+      rush.commit()
+      c1.close()
+      print('ticket booked successfully')
+      print()
+      print("*************************************************************************");
+      p = input('Press any key to go back to the main menu')
