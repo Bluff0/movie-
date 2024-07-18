@@ -1,5 +1,5 @@
   elif(chr1==4):
-    df = pd.read_sql_query('SELECT * FROM movie', rush)
+    df = pd.read_sql_query('SELECT * FROM movie', con=engine)
     print(df)
     for index, row in df.iterrows():
       print()
@@ -25,4 +25,8 @@
       print('ticket booked successfully')
       print()
       print("*************************************************************************");
+      print("your booking reference is",bookingno);
+      print("*************************************************************************")
+      print()
       p = input('Press any key to go back to the main menu')
+      break
